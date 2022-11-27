@@ -1,0 +1,45 @@
+body{
+    background-image: url("../img/chalk.jpg");
+    background-size: cover;
+    font-family: 'Fredericka the Great', cursive;
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    grid-template-rows: 200px 200px 200px 200px 200px 200px;
+    padding-left: 135px;
+}
+
+div.grid-container h1{
+    font-size: 60px;
+}
+
+.button {
+    background-color: rgb(216, 164, 95);
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+@font-face {
+    font-family: 'Fredericka the Great', cursive;
+    src: url(https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap);
+}
+
+h1{
+    font-size: 40px;
+}
+
+.intro{
+    text-align: center;
+}
+
+p{
+    font-size: 30px;
+}
+
+.back{
+    text-align:center;
+}
