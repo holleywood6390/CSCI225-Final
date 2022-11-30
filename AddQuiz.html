@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title> Addition Quiz </title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+	</script>
 </head>
 
 <body>
@@ -20,12 +23,12 @@
             <p>John has  pencils. John gets  pencils from the teacher. How many pencils does he have now?</p>
             <p>Choose the correct answer below:</p>
 
-            <form>
+            <form class="simpleQuiz">
                 <div class="answergroup">
-                <div class="answer selected"><label><input type="checkbox" name="ans" value="1"> </label> </div>
-                <div class="answer"><label><input type="checkbox" name="ans" value="2"> </label> </div>
-                <div class="answer"><label><input type="checkbox" name="ans" value="3"> </label> </div>
-                <div class="answer"><label><input type="checkbox" name="ans" value="4"> </label></div>
+                <div class="answer selected"><label><input type="radio" name="ans" value="1"> </label> </div>
+                <div class="answer"><label><input type="radio" name="ans" value="2"> </label> </div>
+                <div class="answer"><label><input type="radio" name="ans" value="3"> </label> </div>
+                <div class="answer"><label><input type="radio" name="ans" value="4"> </label></div>
                 </div>
                 <input type="submit" value="submit">
 
@@ -37,6 +40,10 @@
 
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
 
     <script src="js/AddQuiz.js"></script>
 
