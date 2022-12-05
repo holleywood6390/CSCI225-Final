@@ -79,15 +79,14 @@ function SetNum() {
 
 SetNum();
 
-var ans = M + N;
+var ans = M+N;
 
-var answer = document.getElementsByName('answer')[0].value;
+//var answer = document.getElementsByName('answer')[0].value;
 var count = 0;
 console.log(count);
 
 function counter() {
-  answer = document.getElementsByName('answer')[0].value;
-
+  var answer = document.getElementsByName('answer')[0].value;
     if (answer == ans) {
       count = count + 1;
     }
