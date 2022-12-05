@@ -20,41 +20,13 @@
     <div class="mainwrapper">
         <div class="question">
             <h1>Complete the Addition Problems Below</h1>
-            <script>
-                function numbers1() {
-                    var num1 = Math.floor(Math.random() *10+1);
-                }
-
-                function numbers2() {
-                    var num2 = Math.floor(Math.random() *100+10);
-                }
-
-                function numbers3() {
-                    var num3 = Math.floor(Math.random() *1000+100)
-                } 
-
-                // Insert the numbers where I have insert written in the paragraph below.
-                // The intention is to run it based on if statementss.
-                /* If count <3
-                        call numbers1
-                    else if count >= 3 < 6
-                        call numbers2
-                    else 
-                    call numbers3
-                */
-               /*The numbers will start off with function numbers1 and after the user clicks submit each time if the answer is correct the count will += 1 and call the correct
-                    function to generate the numbers.
-
-                    The other if statement we will have is for the score. If the answer is correct, then based on the count the score will += a different amount.
-
-                    We need help getting these functions to work in this way and inserting them into the problem. */
-            </script>
+    
             <p>John has <span id="n1"></span> pencils. John gets <span id="n2"></span> pencils from the teacher. How many pencils does he have now?</p>
             <p>Input the correct answer below:</p>
 
             <form class="simpleQuiz">
-                <input type="text" id="answer" placeholder="1234">
-                <input type="submit" value="submit">
+                <input type="text" name="answer" placeholder="1234">
+                <input type="submit" id="SubmitAns" value="submit" onclick="ChangeNum()">
 
             </form>
         </div>
