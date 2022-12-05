@@ -37,7 +37,7 @@ firebase
   });
 });
 
-
+/*
 function changestyle() {
     var classname = this.getAttribute("class");
     if (classname=="answer") {
@@ -46,4 +46,56 @@ function changestyle() {
     else {
         this.setAttribute("class", "answer");
     }
+} */
+
+/* function numbers1() {
+  var num1 = Math.floor(Math.random() *10+1);
 }
+
+function numbers2() {
+  var num2 = Math.floor(Math.random() *100+10);
+}
+
+function numbers3() {
+  var num3 = Math.floor(Math.random() *1000+100)
+} */
+
+function SetNum() {
+  var M = numbers1();
+  var N = numbers2();
+
+  document.getElementById('n1').innerHTML=M.toString();
+  document.getElementById('n2').textContent=N.toString();
+}
+document.getElementById('n1').addEventListener()
+
+
+function counter() {
+  var count = 0;
+  var ans = M + N;
+  if (document.getElementById("answer").value() == ans) {
+    count += 1;
+  }
+}
+
+function ChangeNum() {
+  if (count < 3) {
+    M = numbers1();
+    N = numbers1();
+  }
+  else if (count >= 3 && count < 6) {
+    M = numbers2();
+    N = numbers2();
+  }
+  else {
+    M = numbers3();
+    N = numbers3();
+  }
+
+  document.getElementById('n1').textContent=M.toString();
+  document.getElementById('n2').textContent=N.toString();
+}
+
+
+
+
