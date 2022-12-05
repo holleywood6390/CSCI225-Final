@@ -81,7 +81,6 @@ SetNum();
 
 var ans = M+N;
 
-//var answer = document.getElementsByName('answer')[0].value;
 var count = 0;
 console.log(count);
 
