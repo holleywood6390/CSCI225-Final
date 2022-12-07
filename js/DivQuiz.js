@@ -20,7 +20,7 @@ const firebaseConfig = {
     });
   
     console.log(ddata);
-    firebase.firestore().collection('divQuiz').add({ name: " ", score: " " });
+    firebase.firestore().collection('divQuiz').add({ score, ddata });
   });
   
   firebase

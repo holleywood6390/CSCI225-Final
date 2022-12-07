@@ -20,7 +20,7 @@ $(".simpleQuiz input[type='submit']").click(function (e) {
     });
 
     console.log(mdata);
-    firebase.firestore().collection('mixedQuiz').add({ name: " ", score: " " });
+    firebase.firestore().collection('mixedQuiz').add({ score, mdata });
 });
 
 firebase
@@ -31,9 +31,9 @@ firebase
     .onSnapshot((querySnapshot) => {
         console.log(querySnapshot.size);
         querySnapshot.forEach((doc) => {
-            console.log(doc.data());
-            console.log(doc.data().name);
-            console.log(doc.data().score);
+            //console.log(doc.data());
+           // console.log(doc.data().name);
+            //console.log(doc.data().score);
         });
     });
 

@@ -20,7 +20,7 @@ const firebaseConfig = {
     });
   
     console.log(edata);
-    firebase.firestore().collection('expQuiz').add({ name: " ", score: " " });
+    firebase.firestore().collection('expQuiz').add({ score, edata });
   });
   
   firebase

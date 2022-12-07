@@ -20,7 +20,7 @@ const firebaseConfig = {
     });
   
     console.log(pdata);
-    firebase.firestore().collection('pythagQuiz').add({ name: " ", score: " " });
+    firebase.firestore().collection('pythagQuiz').add({ score, pdata });
   });
   
   firebase

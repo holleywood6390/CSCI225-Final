@@ -20,7 +20,7 @@ const firebaseConfig = {
     });
   
     console.log(multdata);
-    firebase.firestore().collection('multQuiz').add({ name: " ", score: " " });
+    firebase.firestore().collection('multQuiz').add({ score, multdata });
   });
   
   firebase

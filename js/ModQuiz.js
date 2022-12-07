@@ -20,7 +20,7 @@ const firebaseConfig = {
     });
   
     console.log(moddata);
-    firebase.firestore().collection('modQuiz').add({ name: " ", score: " " });
+    firebase.firestore().collection('modQuiz').add({ score, moddata });
   });
   
   firebase

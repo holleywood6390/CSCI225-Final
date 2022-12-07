@@ -20,7 +20,7 @@ const firebaseConfig = {
     });
   
     console.log(fdata);
-    firebase.firestore().collection('factQuiz').add({ name: " ", score: " " });
+    firebase.firestore().collection('factQuiz').add({ score, fdata });
   });
   
   firebase

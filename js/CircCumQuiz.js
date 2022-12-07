@@ -20,7 +20,7 @@ $(".simpleQuiz input[type='submit']").click(function (e) {
     });
 
     console.log(cqdata);
-    firebase.firestore().collection('circQuiz').add({ name: " ", score: " " });
+    firebase.firestore().collection('circQuiz').add({ score, cqdata });
 });
 
 firebase
