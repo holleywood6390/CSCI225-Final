@@ -12,20 +12,20 @@ const firebaseConfig = {
   
   $(".simpleQuiz input[type='submit']").click(function (e) {
     e.preventDefault();
-    var quizData = $('form').serializeArray();
-    var qdata = {};
-    quizData.forEach((entry) => {
+    var divQuiz = $('form').serializeArray();
+    var ddata = {};
+    divQuiz.forEach((entry) => {
       console.log(entry);
-      qdata[entry.name] = entry.value;
+      ddata[entry.name] = entry.value;
     });
   
-    console.log(qdata);
-    firebase.firestore().collection('quizData').add({ name: " ", score: " " });
+    console.log(ddata);
+    firebase.firestore().collection('divQuiz').add({ name: " ", score: " " });
   });
   
   firebase
     .firestore()
-    .collection('quizData')
+    .collection('divQuiz')
     .orderBy('score', 'desc')
     .limit(5)
     .onSnapshot((querySnapshot) => {

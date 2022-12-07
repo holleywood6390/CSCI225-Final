@@ -10,43 +10,31 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-$(".simpleQuiz input[type='submit']").click(function (e) {
-  e.preventDefault();
-  var quizData = $('form').serializeArray();
-  var qdata = {};
-  quizData.forEach((entry) => {
-    console.log(entry);
-    qdata[entry.name] = entry.value;
-  });
-
-  console.log(qdata);
-  firebase.firestore().collection('quizData').add({ name: " ", score: " " });
-});
-
 firebase
-  .firestore()
-  .collection('quizData')
-  .orderBy('score', 'desc')
-  .limit(5)
-  .onSnapshot((querySnapshot) => {
-    console.log(querySnapshot.size);
-    querySnapshot.forEach((doc) => {
-      console.log(doc.data());
-      console.log(doc.data().name);
-      console.log(doc.data().score);
+    .firestore()
+    .collection('addQuiz')
+    .orderBy('score', 'desc')
+    .limit(5)
+    .onSnapshot((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        console.log(doc.data());
+        console.log(doc.data().name);
+        console.log(doc.data().score);
+      });
     });
-  });
 
-/*
-function changestyle() {
-    var classname = this.getAttribute("class");
-    if (classname=="answer") {
-    this.setAttribute("class","answer selected");
-    }
-    else {
-        this.setAttribute("class", "answer");
-    }
-} */
+    $(".simpleQuiz input[type='submit']").click(function (e) {
+      e.preventDefault();
+      var addQuiz = $('form').serializeArray();
+      var adata = {};
+      addQuiz.forEach((entry) => {
+          adata[entry.name] = entry.value;
+      });
+      console.log(adata);
+      firebase.firestore().collection('addQuiz').add({score, adata});
+    });
+
+
 
 function numbers1() {
   var num1 = Math.floor(Math.random() * 10 + 1);
@@ -73,8 +61,6 @@ function SetNum() {
   document.getElementById('n1').innerHTML = M.toString();
   document.getElementById('n2').textContent = N.toString();
 
-  console.log(M);
-  console.log(N);
 }
 
 SetNum();
@@ -84,8 +70,7 @@ var ans = M+N;
 
 
 var count = 0;
-console.log(count);
-var score = 0;
+var score = 1;
 var questions = 0;
 
 
@@ -104,18 +89,14 @@ function counter() {
       }
       count = count + 1;
     }
-  console.log(count);
-  console.log(answer);
-  console.log(ans);
-  console.log(score);
 
   questions = questions + 1;
-  console.log(questions);
+
 
   if (questions==10) {
+    console.log(score);
     location.href="EndAdd.html";
-  }
-  else {
+  }else {
     ChangeNum();
   }
 }
