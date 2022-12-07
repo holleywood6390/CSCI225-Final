@@ -14,7 +14,7 @@ const firebaseConfig = {
     e.preventDefault();
     var modQuiz = $('form').serializeArray();
     var moddata = {};
-    quizData.forEach((entry) => {
+    modQuiz.forEach((entry) => {
       console.log(entry);
       moddata[entry.name] = entry.value;
     });
