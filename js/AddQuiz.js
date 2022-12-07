@@ -27,8 +27,12 @@ firebase
       e.preventDefault();
       var addQuiz = $('form').serializeArray();
       var adata = {};
+      var adata2={};
+      var addName = $('#name').val()
+      console.log(addName);
       addQuiz.forEach((entry) => {
           adata[entry.name] = entry.value;
+          adata2 = $('#name').val();
       });
       console.log(adata);
       firebase.firestore().collection('addQuiz').add({score, adata});
